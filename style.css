@@ -23,6 +23,7 @@ button {
     color: aliceblue;
     background-color: black;
     font-size: 22px;
+    outline: none;
 }
 
 button:hover {
