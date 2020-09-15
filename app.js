@@ -1,14 +1,14 @@
 let computerPlay = () => {
     let newArray = ["Rock", "Paper", "Scissors"];
     let choice = Math.floor(Math.random(newArray) * 3);
-    return choice;
+    return newArray[choice];
 }
 
 let playerCounter = 0;
 let computerCounter = 0;
 
 let playRound = (playerSelection, computerSelection) => {
-    computerPlay();
+    computerSelection = computerPlay();
 
     if (playerSelection === computerSelection) {
         paragraph.innerHTML = `It is a tie!
@@ -19,9 +19,7 @@ let playRound = (playerSelection, computerSelection) => {
         computerCounter++;
         paragraph.innerHTML = `You lose! ${playerSelection} beats ${computerSelection}
         Your score: ${playerCounter}     Computer's score: ${computerCounter}`;
-    } else if (playerSelection === 'Paper' && computerSelection === 'Rock' ||
-        playerSelection === 'Scissors' && computerSelection === 'Paper' ||
-        playerSelection === 'Rock' && computerSelection === 'Scissors') {
+    } else {
         playerCounter++;
         paragraph.innerHTML = `You win! ${playerSelection} beats ${computerSelection}!
         Your score: ${playerCounter}     Computer's score: ${computerCounter}`;
@@ -35,7 +33,6 @@ let playRound = (playerSelection, computerSelection) => {
 let rock = document.getElementById('rock');
 let paper = document.getElementById('paper');
 let scissors = document.getElementById('scissors');
-
 
 rock.addEventListener('click', (e) => {
     playRound(e.target.textContent);
@@ -51,13 +48,15 @@ scissors.addEventListener('click', (e) => {
 
 let div = document.getElementById('display');
 let paragraph = document.createElement('p');
+div.style.textAlign = 'center';
+div.style.fontSize = '22px';
 
 function endOfGame() {
     let anotherP = document.createElement('p');
     if (playerCounter > computerCounter) {
-        anotherP.innerHTML = 'You win!';
+        anotherP.textContent = 'You win!';
     } else {
-        anotherP.innerHTML = 'Computer wins!';
+        anotherP.textContent = 'Computer wins!';
     }
     div.appendChild(anotherP);
 
@@ -77,9 +76,9 @@ function endOfGame() {
 function reset() {
     playerCounter = 0;
     computerCounter = 0;
-    display.innerHTML = `Your score: ${playerCounter}     Computer's score: ${computerCounter}`;
-    display.removeChild(display.lastChild);
-    display.removeChild(display.lastChild);
+    paragraph.innerHTML = `Your score: ${playerCounter}     Computer's score: ${computerCounter}`;
+    div.removeChild(div.lastChild);
+    div.removeChild(div.lastChild);
 
     rock.disabled = false;
     paper.disabled = false;

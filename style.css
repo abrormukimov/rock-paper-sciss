@@ -1,8 +1,41 @@
 html {
-    /* background-color: #000; */
-    /* color: #fff; */
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background: #ffd662ff;
+}
+
+h2 {
+    text-align: center;
+    color: #0e1111;
+}
+
+button {
+    text-align: center;
+    margin: 10px 10px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: black;
+    font-size: 22px;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000000;
+}
+
+button:focus {
+    border: none;
+}
+
+.ctn {
+    display: flex;
+    margin: 50px auto;
+    width: 500px;
 }
