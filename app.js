@@ -74,6 +74,11 @@ function endOfGame() {
     rock.disabled = true;
     paper.disabled = true;
     scissors.disabled = true;
+
+    let buttons = document.querySelectorAll('.button');
+    buttons.forEach((button) => {
+        button.classList.add('disable-hover');
+    });
 }
 
 function reset() {
@@ -86,4 +91,9 @@ function reset() {
     rock.disabled = false;
     paper.disabled = false;
     scissors.disabled = false;
+
+    let buttons = document.querySelectorAll('.button');
+    buttons.forEach((button) => {
+        button.classList.remove('disable-hover');
+    });
 }

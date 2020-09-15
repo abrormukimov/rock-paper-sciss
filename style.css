@@ -36,3 +36,13 @@ button:hover {
     margin: 50px auto;
     width: 500px;
 }
+
+.disable-hover {
+    background-color: rgb(116, 113, 113);
+}
+
+.disable-hover:hover {
+    color: aliceblue;
+    background-color: rgb(116, 113, 113);
+    cursor: text;
+}
