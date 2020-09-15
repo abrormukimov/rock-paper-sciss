@@ -28,10 +28,7 @@ button {
 button:hover {
     background-color: #fff;
     color: #000000;
-}
-
-button:focus {
-    border: none;
+    cursor: pointer;
 }
 
 .ctn {

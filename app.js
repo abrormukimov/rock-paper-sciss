@@ -12,16 +12,19 @@ let playRound = (playerSelection, computerSelection) => {
 
     if (playerSelection === computerSelection) {
         paragraph.innerHTML = `It is a tie!
+
         Your score: ${playerCounter}     Computer's score: ${computerCounter}`;
     } else if (playerSelection === 'Rock' && computerSelection === 'Paper' ||
         playerSelection === 'Paper' && computerSelection === 'Scissors' ||
         playerSelection === 'Scissors' && computerSelection === 'Rock') {
         computerCounter++;
-        paragraph.innerHTML = `You lose! ${playerSelection} beats ${computerSelection}
+        paragraph.innerHTML = `You lose! ${computerSelection} beats ${playerSelection}!
+
         Your score: ${playerCounter}     Computer's score: ${computerCounter}`;
     } else {
         playerCounter++;
         paragraph.innerHTML = `You win! ${playerSelection} beats ${computerSelection}!
+
         Your score: ${playerCounter}     Computer's score: ${computerCounter}`;
     }
     div.appendChild(paragraph);
