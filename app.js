@@ -85,29 +85,3 @@ function reset() {
     paper.disabled = false;
     scissors.disabled = false;
 }
-
-// function game() {
-//     let i = 0;
-//     while (i < 5) {
-//         let playerChoice = window.prompt("Make your choice!");
-//         computerPlay();
-
-//         playRound(playerChoice, computerPlay);
-
-//         if (playRound().includes('You win')) {
-//             playerCounter++;
-//         } else {
-//             computerCounter++;
-//         }
-//         i++;
-//     	}
-
-// }
-
-// if (playerCounter > computerCounter) {
-//     console.log('Player wins!');
-// } else if (playerCounter === computerCounter) {
-//     console.log('It is a tie!');
-// } else {
-//     console.log('Computer wins!');
-// }
