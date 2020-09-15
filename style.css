@@ -45,5 +45,5 @@ button:hover {
 .disable-hover:hover {
     color: aliceblue;
     background-color: rgb(116, 113, 113);
-    cursor: text;
+    cursor: not-allowed;
 }
